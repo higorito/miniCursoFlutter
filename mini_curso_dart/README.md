@@ -724,58 +724,47 @@ throw IntegerDivisionByZeroException();
 throw IOException();
 ```
 
-### TimeoutException
+## Bibliotecas
+
+### Import
 
 ```dart
-throw TimeoutException("Tempo de conexão esgotado");
+import 'dart:io'; 
 ```
 
-### Error
+Desta forma, todos os recursos da biblioteca serão importados. Os principais recursos da biblioteca dart:io são: File, Directory, Platform, Process, Socket, ServerSocket, HttpClient, HttpHeaders, HttpServer, WebSocket...
+Neste projeto usaremos a entrada e saída de dados para o console, portanto, importaremos apenas o recurso stdin.
 
 ```dart
-throw Error();
+stdin.readLineSync(); //Lê uma linha de texto do console
 ```
 
-### AssertionError
-
 ```dart
-throw AssertionError();
+stdout.write("Digite seu nome: "); //Escreve uma linha de texto no console
 ```
 
-### CastError
+### Import as
 
 ```dart
-throw CastError();
+import 'dart:io' as io;
 ```
 
-### NullThrownError
-
+### Converter tipos
+  
 ```dart
-throw NullThrownError();
+int.parse("20"); //Converte uma String para um inteiro
 ```
 
-### RangeError
-
 ```dart
-throw RangeError();
+double.parse("1.80"); //Converte uma String para um double
 ```
 
-### StateError
-
 ```dart
-throw StateError("Erro de estado");
+int.tryParse("20"); //Tenta converter uma String para um inteiro
 ```
 
-### UnimplementedError
-
 ```dart
-throw UnimplementedError();
-```
-
-### UnsupportedError
-
-```dart
-throw UnsupportedError("Operação não suportada");
+double.tryParse("1.80"); //Tenta converter uma String para um double
 ```
 
 ## Referências
